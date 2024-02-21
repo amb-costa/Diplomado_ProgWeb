@@ -1,0 +1,40 @@
+<!--Crea un formulario para el control de acceso a una web. Debe
+llamar a la URL http://127.0.0.1/login_usuario con los campos
+nombre_usuario y password. Los atributos no deben ser visibles
+en la URL.-->
+<!--La página debe tener un título que indique la pantalla en la que se
+encuentra (también debe mostrar el título en el navegador).-->
+<!--No es necesario que sea estético.-->
+
+<!--Desde ahora, se usará HTML5 en vez de HTML-->
+<!--Ya que el usuario no puede ver los atributos, se utiliza POST como método-->
+<!--Envío de datos se realiza a través de NAME, entonces name="nombre_usuario"/"password"-->
+<!--URL es lo de menos -> apunta a servidor local, no entrega respuesta-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Caso Práctico - Formulario en HTML5</title>
+    </head>
+    <body>
+        <h1>Caso Práctico - Formulario en HTML5</h1>
+        <form method="POST" action="http://127.0.0.1/login_usuario" target="_blank">
+            <h3>Completa tus datos para ingresar</h3>
+            <hr>
+            <div>
+                <label for="nombre_usuario" >Nombre de Usuario</label>
+                <input type="text" name="nombre_usuario" />
+                <br>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" />
+                <br>
+            </div>
+            <hr>
+            <input type="submit" value="Enviar" />
+        </form>
+        
+    </body>
+</html>
