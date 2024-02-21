@@ -1,0 +1,1 @@
+<p>Revisar diplomado "Programación y Diseño Web" en el sitio de <a href="https://sence.gob.cl/personas/diplomados-sociedad-digital">Diplomados Sociedad Digital</a></p>
