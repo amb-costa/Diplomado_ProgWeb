@@ -3,4 +3,29 @@ Esta es la hoja de estilos para CSS3_style.html
 El documento HTML contiene estilos de tipo <style> (tag) e inline
 Aquí irán todos los estilos referente a la tabla */
 
+tr:first-child, tr:last-child {
+    background-color: rgb(255, 182, 46) !important;
+}
 
+table {
+    width:35%;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    border: solid black 2px;
+    border-collapse: collapse; /*  esto es necesario o tr no se estiliza */
+
+    tr {
+        border: solid #000000 2px;
+        margin: 5px;
+        padding: 4px 5px;
+    }
+}
+
+tr:nth-child(even) {
+    background-color: hsla(229, 58%, 49%, 0.569)
+}
+
+tr:nth-child(odd) {
+    background-color: hsla(187, 39%, 56%, 0.603);
+}
