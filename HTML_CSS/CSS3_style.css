@@ -1,7 +1,8 @@
 /* 
 Esta es la hoja de estilos para CSS3_style.html
 El documento HTML contiene estilos de tipo <style> (tag) e inline
-Aquí irán todos los estilos referente a la tabla */
+Aquí irán todos los estilos referente a la tabla 
+*/
 
 tr:first-child, tr:last-child {
     background-color: rgb(255, 182, 46) !important;
