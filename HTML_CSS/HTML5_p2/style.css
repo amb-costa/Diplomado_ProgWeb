@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+Hoja de estilos para inicio.html y sus páginas asociadas
+No es necesario para el ejercicio, solo fines de estudio
+La font "Montserrat" no es necesaria, y se importa desde google fonts
+*/
+
+body {
+    background-color: rgba(173, 134, 217, 0.439);
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column
+}
+
+header {
+    border: dotted black 3px;
+    border-radius: 10px;
+    font-family: "Montserrat";
+    width: 75%;
+    margin: 5px auto;
+}
+
+div {
+    width: 75%;
+    margin: auto;
+
+    * {
+        margin: 0px 15px;
+        border: groove black 2px;
+        border-radius: 2px;
+        padding: 15px 30px;
+        background-color: rgba(76, 0, 130, 0.317);
+        color:darkslateblue;
+    }
+
+}
+
+footer {
+    border-top: solid black 2px;
+    font-size: 35px;
+    margin-top: auto;
+}
