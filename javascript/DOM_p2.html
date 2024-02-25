@@ -1,0 +1,39 @@
+<!--Añadir un nuevo elemento <p> con el texto “Texto del nuevo párrafo”
+y que sea hijo del body-->
+<!--Como el código es pequeño, el código Javascript se añadirá mediante <script>-->
+<!--Se ubicará al final del body porque el HTML debe cargar antes de modificarlo-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Manipulación del DOM</title>
+</head>
+<body>
+    <header>
+        <h1>Manipulacion del Dom</h1>
+        <h3>Este documento tiene un parrafo extra</h3>
+    </header>
+    <div>
+        <p>Aqui hay uno</p>
+        <p>Aqui otro</p>
+        <span>Esto parece parrafo pero es un span</span>
+        <a href="">Y esto es un link sin URL asociada</a>
+        <p>Este es el tercero</p>
+    </div>
+    <footer>
+        <p>Y este es el ultimo, que esta en el footer</p>
+    </footer>
+    <script>
+        const cuerpo = document.querySelector("body")
+        const parrafo = document.createElement("p")
+        parrafo.style.color = "blue"
+        parrafo.innerHTML = "Texto del nuevo parrafo"
+        cuerpo.append(parrafo)
+        alert("Este documento tiene un parrafo nuevo")
+    </script>
+</body>
+</html>
