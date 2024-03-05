@@ -1,0 +1,46 @@
+<!--Teniendo el archivo XML cuyo nombre es ejemploXML.xml y con este texto: Hola holita-->
+<!--Realizar un formulario con un texto y un botón de submit-->
+<!--Cuando se envíe una petición por AJAX al servidor, obtenga el contenido de ese XML y lo ponga en el campo de texto-->
+
+<!--Este código no funciona por si solo, por temas de CORS-->
+<!--XML debe estar en el mismo servidor que el archivo HTML-->
+<!--Se testeó usando Live Server en VSCode, todo correcto-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Peticion XML con AJAX</title>
+    <script type="text/javascript">
+        function holaXML() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject(Microsoft.XMLHTTP)
+            }
+            xmlhttp.onreadystatechange = function() {
+                console.log(xmlhttp.status)
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    document.getElementById("textArea").innerHTML = xmlhttp.responseText
+                }
+            }
+            xmlhttp.open("GET","ejemploXML.xml",true);
+            xmlhttp.send()
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Peticion XML con AJAX</h1>
+        <h3>Aprieta el botón y aparecera un mensaje nuevo</h3>
+    </header>
+    <form>
+        <p id="textArea">Aqui debiera haber un saludo...</p>
+        <button type="button" onclick="holaXML()">hazme click!</button>
+    </form>
+</body>
+</html>
