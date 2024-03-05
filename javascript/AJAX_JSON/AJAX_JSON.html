@@ -1,0 +1,46 @@
+<!--Teniendo el archivo json cuyo nombre es ejemploJSON.json-->
+<!--Realizar un formulario con un texto y un botón de submit-->
+<!--Cuando se envíe una petición por AJAX al servidor, obtenga el contenido de ese JSON y lo ponga en el campo de texto-->
+
+<!--Este código no funciona por si solo, por temas de CORS-->
+<!--XML debe estar en el mismo servidor que el archivo HTML-->
+<!--Se testeó usando Live Server en VSCode, todo correcto-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Peticion JSON con AJAX</title>
+    <script type="text/javascript">
+        function holaJSON() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject(Microsoft.XMLHTTP)
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    console.log(JSON.parse(xmlhttp.responseText))
+                        document.getElementById("textArea").innerHTML = xmlhttp.responseText
+                }
+            }
+            xmlhttp.open("GET","ejemploJSON.json",true);
+            xmlhttp.send()
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Peticion JSON con AJAX</h1>
+        <h3>Aprieta el botón y aparecera el contenido de un JSON</h3>
+    </header>
+    <form>
+        <p id="textArea">Aqui debiera aparecer informacion de un JSON...</p>
+        <button type="button" onclick="holaJSON()">hazme click!</button>
+    </form>
+</body>
+</html>
